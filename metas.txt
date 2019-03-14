@@ -1,0 +1,4 @@
+- histograma com capitais
+- histograma com as palavras mais usadas
+- definir aplicação
+- Ler artigos Brasnam(evento)

@@ -62,7 +62,7 @@ with open(arquivo_csv, encoding="utf-8", mode='w') as csv_file:
             cont = cont+1
 
         print('Total de tweets: %s' % (cont))
-        print("Fim <3")
+
 
     #CRIANDO A NUVEM DE PALAVRAS
         #pega a base de dados e transforma em dataframe
@@ -70,7 +70,7 @@ with open(arquivo_csv, encoding="utf-8", mode='w') as csv_file:
         #coloca todos os tweets em uma unica variável
         text = ''
         for val in dt_frame.tweet:
-            #Tokeniza o tweet
+            #Tokeniza o tweet. Parece que é melhor fazer isso depois, mas pense bem, é melhor aqui.
             t = tweet_tokenizer.tokenize(val)
             #Transformar novamente em texto
             tweet = ''

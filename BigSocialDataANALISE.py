@@ -1,13 +1,13 @@
 import numpy as np
 import pandas as pd
-from os import path
-from PIL import Image
-import sys
+#from os import path
+#from PIL import Image
+import sys #para resolver os emoji's
 import csv
 import nltk
 from nltk.tokenize import TweetTokenizer
 from nltk import FreqDist
-import matplotlib.pyplot as plt
+#import matplotlib.pyplot as plt
 from wordcloud import WordCloud
 
 
@@ -22,7 +22,7 @@ non_bmp_map = dict.fromkeys(range(0x10000, sys.maxunicode + 1), 0xfffd)
 
 
 #ASSUNTO DESEJADO
-arquivo_csv = 'TwitterGoverno.csv'
+arquivo_csv = 'TwitterData.csv'
 
 #pega a base de dados e transforma em dataframe
 dt_frame = pd.read_csv(arquivo_csv, encoding='UTF-8')
@@ -53,7 +53,7 @@ for token in tokens:
             if(x == token):
                 tokens.remove(token)
 
-            
+
         #if token in stopwords:
         #    tokens.remove(token)
 
@@ -63,7 +63,5 @@ print('Depois da limpeza: %s \n' % (len(tokens)))
 tokens_str = ' '.join(tokens)
 
 #Criação da nuvem de palavras
-wordcloud = WordCloud(max_font_size=50, max_words=100, background_color="white").generate(tokens_str)
+wordcloud = WordCloud(max_font_size=50, max_words=100, background_color="white", width=600, height=400).generate(tokens_str)
 wordcloud.to_file("wordCloud/TweetsGoverno3.png")
-
-
