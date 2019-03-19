@@ -6,7 +6,7 @@ import sys #para resolver os emoji's
 non_bmp_map = dict.fromkeys(range(0x10000, sys.maxunicode + 1), 0xfffd)
 
 #FUNÇÃO PATA CAPTURA DE DADOS DO Twitter
-def getTwitterData(word, arquivo_csv):
+def getTwitterData(words, arquivo_csv):
     with open(arquivo_csv, encoding="utf-8", mode='w') as csv_file:
         colunas = ['name', 'screen_name', 'location', 'followers_count', 'friends_count',
                    'tweet']
@@ -22,7 +22,7 @@ def getTwitterData(word, arquivo_csv):
                 access_token_secret = 'O7IT1RuvhO5KhhAF7Vf5uI5TekF3VaqrYjjosnH3nYwQ2')
 
             tso=TwitterSearchOrder()
-            tso.set_keywords([word])
+            tso.set_keywords(words)
             tso.set_language('pt')
 
             #todos os dados enviados pelo Twitter

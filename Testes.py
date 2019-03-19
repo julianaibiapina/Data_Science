@@ -15,5 +15,16 @@ import getTwitterData
 #preserve_case=False -> irá alterar a forma da escrita, deixando tudo em minúsculo
 tweet_tokenizer = TweetTokenizer(strip_handles=True, reduce_len=True, preserve_case=False)
 
+list_words = ['governo','bolsonaro','brasil']
+arquivo_csv = 'Governo-Março-2019.csv'
 
-getTwitterData.getTwitterData('governo', 'Governo-03-19.csv')
+#pega os dados do Twitter e salva no .csv
+getTwitterData.getTwitterData(list_words, arquivo_csv)
+
+#transforma o csv em dataframe
+dt_frame = pd.read_csv(arquivo_csv, encoding='UTF-8')
+
+#LIMPEZA DE DADOS
+
+#https://medium.com/data-hackers/dicas-de-data-cleaning-44d050e712bc
+#https://medium.com/lucas-oliveira/limpeza-e-prepara%C3%A7%C3%A3o-dos-dados-com-pandas-856e844abfbb
