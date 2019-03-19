@@ -7,7 +7,7 @@
 
 - Limpar os dados:
      1. Remover tweets repetidos                                          ok!
-     2. Guardar as hashtags em outra coluna e removê-las do tweet
+     2. Guardar as hashtags em outra coluna e removê-las do tweet         parei aqui
      3. Remover as marcas de agregação, as quais começam com RT e @
      4. Remover os links
      5. Transformar os emojis em palavras-chave:
