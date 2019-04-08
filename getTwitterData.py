@@ -39,3 +39,7 @@ def getTwitterData(words, arquivo_csv):
         except TwitterSearchException as e:
             print(e)
             return
+
+getTwitterData(['Lollapalooza'], 'Lollapalooza.csv')
+
+print("Fim.")
