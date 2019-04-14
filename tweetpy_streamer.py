@@ -41,13 +41,7 @@ class StdOutListener(StreamListener):
 
     def on_data(self, data):
         try:
-            print(type(data))
-            #with open(self.fetched_tweets_filename, encoding="utf-8", mode='w') as csv_file:
-            #    colunas = ['created_at', 'tweet', 'user_name', 'user_screen_name', 'user_location',
-            #               'user_description', 'user_followers_count', 'user_friends_count', 'user_created_at', 'coordinates', 'place']
-            #    writer = csv.DictWriter(csv_file, fieldnames=colunas)
-            #    writer.writeheader()
-            #    writer.writerow(data)
+            print(data)
             return True
         except BaseException as e:
             print("Error on_data %s" % str(e))
@@ -62,7 +56,7 @@ if __name__ == '__main__':
 
     # Authenticate using config.py and connect to Twitter Streaming API.
     hash_tag_list = ["donal trump", "hillary clinton", "barack obama", "bernie sanders"]
-    fetched_tweets_filename = "tweets.csv"
+    fetched_tweets_filename = "tweeeeets.csv"
 
     twitter_streamer = TwitterStreamer()
     twitter_streamer.stream_tweets(fetched_tweets_filename, hash_tag_list)
