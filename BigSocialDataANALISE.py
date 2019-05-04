@@ -22,7 +22,7 @@ non_bmp_map = dict.fromkeys(range(0x10000, sys.maxunicode + 1), 0xfffd)
 
 
 #ASSUNTO DESEJADO
-arquivo_csv = 'TwitterData.csv'
+arquivo_csv = 'twitterData.csv'
 
 #pega a base de dados e transforma em dataframe
 dt_frame = pd.read_csv(arquivo_csv, encoding='UTF-8')

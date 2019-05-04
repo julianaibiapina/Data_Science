@@ -21,17 +21,17 @@ with open('twitterData.csv', encoding="utf-8", mode='w') as csv_file:
     try:
 
         ts = TwitterSearch(
-            consumer_key = 'mgpSEJ1Fu9le1ND0iulsoWHaM',
-            consumer_secret = 'HMvPmooVtTmiJkfwixOORifcUZz1C442AbYz2Nodg8k0kFKjjP',
-            access_token = '1086082843476938753-6ax1DxzwPMrMfqmganAcnLJ31amKrI',
-            access_token_secret = 'O7IT1RuvhO5KhhAF7Vf5uI5TekF3VaqrYjjosnH3nYwQ2'
+            consumer_key = '8QtmEE1HWvcFlp5WoU7i5MNfk',
+            consumer_secret = 'QCh2qo9ZW2p4lbTwjnjDpHUbmPPgk2Mi2aFpzeegVZH3PRZPPX',
+            access_token = '1086082843476938753-cgDTEfWt3GxXJ2OtSvwOtS4DQ1GxeD',
+            access_token_secret = 'KCUZvATUr1yibFVh8iaC0QWr5UKMbQnAWOGkzGBxRBV1U'
          )
 
         # # # # DOCUMENTAÇÃO:
         # # # # https://twittersearch.readthedocs.io/en/latest/advanced_usage_tso.html
         tso = TwitterSearchOrder()
         tso.set_geocode(-3.71839,-38.5434,300,imperial_metric=True)
-        tso.set_keywords([' ']) #esse parâmetro é obrigatório
+        tso.set_keywords(['governo']) #esse parâmetro é obrigatório
         #tso.set_language('pt')
 
         result = ts.search_tweets_iterable(tso)

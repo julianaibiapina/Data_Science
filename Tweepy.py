@@ -16,7 +16,7 @@ class StdOutListener(StreamListener):
 
     def __init__(self, api= None):
         self.api = api
-        self.filename = 'Data_14-04-TodasHashtags.csv'
+        self.filename = 'TweepyData.csv'
 
         #cria a novo arquivo
         csvData = open(self.filename, 'w')
