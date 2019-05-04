@@ -1,5 +1,5 @@
-#ANTIGO: https://github.com/tweepy/tweepy/blob/master/examples/streaming.py
 #ATUAL: https://chrisalbon.com/python/other/mine_a_twitter_hashtags_and_words/
+
 from tweepy.streaming import StreamListener
 from tweepy import OAuthHandler
 from tweepy import Stream
@@ -167,10 +167,10 @@ def start_mining(queries):
 
 
     # Credenciais da API
-    consumer_key = 'mgpSEJ1Fu9le1ND0iulsoWHaM'
-    consumer_secret = 'HMvPmooVtTmiJkfwixOORifcUZz1C442AbYz2Nodg8k0kFKjjP'
-    access_token = '1086082843476938753-6ax1DxzwPMrMfqmganAcnLJ31amKrI'
-    access_token_secret = 'O7IT1RuvhO5KhhAF7Vf5uI5TekF3VaqrYjjosnH3nYwQ2'
+    consumer_key = '8QtmEE1HWvcFlp5WoU7i5MNfk'
+    consumer_secret = 'QCh2qo9ZW2p4lbTwjnjDpHUbmPPgk2Mi2aFpzeegVZH3PRZPPX'
+    access_token = '1086082843476938753-cgDTEfWt3GxXJ2OtSvwOtS4DQ1GxeD'
+    access_token_secret = 'KCUZvATUr1yibFVh8iaC0QWr5UKMbQnAWOGkzGBxRBV1U'
 
     # Cria um listener
     listener = StdOutListener()
@@ -188,3 +188,10 @@ def start_mining(queries):
 
 # Roda os códigos de mineração
 start_mining(['governo', '#bozo', '#LulaLivre', 'bolsominions', '#BolsonaroEnvergonhaOBrasil', '#bolsolixo ', '#lulaLivreJá', '#PatriaAmadaBrasil', '#DireitaUnida', '#DireitaSegueDireita', '#Conservadorismo', '#BolsonaroOrgulhodoBrasil', '#Luladrão', '#PTNuncaMais'])
+
+
+# Resolver o erro de conexao. O Twitter encerra a conexão após 90 segundos ociosos. Fazer com que o código receba o erro e reinicie a conexão
+# e continue guardando os dados de onde parou.
+#https://stackoverflow.com/questions/33519794/readtimeouterror-twitter-streaming-api
+# Erros de TimeOut no fórum oficial do Tweepy na GitHub
+# https://github.com/tweepy/tweepy/issues/617
