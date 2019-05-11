@@ -1,15 +1,8 @@
-- histograma com capitais
-- histograma com as palavras mais usadas
-- definir aplicação
-- Ler artigos Brasnam(evento)
+Reunião de 06/05, 10h:
 
+	Análise de bolhas sociais
 
+	Script rodou somente ~2h no lab
+	Buscar novos artigos sobre o tema, para trazer "algo novo" para o artigo
 
-- Limpar os dados:
-     1. Remover tweets repetidos                                          ok!
-     2. Guardar as hashtags em outra coluna e removê-las do tweet         parei aqui
-     3. Remover as marcas de agregação, as quais começam com RT e @
-     4. Remover os links
-     5. Transformar os emojis em palavras-chave:
-	 exemplo: ECoracao, EBravo, ESorridente...
-     6. Remoção de storwords
+	Tentar fazer um resumo em formato de slides para enviar para a profa Andrea Linhares
